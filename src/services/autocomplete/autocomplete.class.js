@@ -10,9 +10,11 @@ class Service {
     }
   }
 
-  async get (id, params) {
+  async get (query, params) {
     return {
-      text: `Requested: ${JSON.stringify(id)}!`
+      result: {
+        query
+      }
     }
   }
 }
