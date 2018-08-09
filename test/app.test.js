@@ -23,13 +23,19 @@ describe('Feathers application tests', () => {
     this.server.close(done)
   })
 
-  it('starts and shows the index page', () => {
-    return rp(getUrl()).then(body =>
-      assert.ok(body.indexOf('<html>') !== -1)
-    )
-  })
-
   describe('404 tests', function () {
+    it('initialize and shows a 404 HTML page on root path', () => {
+      return rp({
+        url: getUrl('/'),
+        headers: {
+          'Accept': 'text/html'
+        }
+      }).catch(res => {
+        assert.strict.equal(res.statusCode, 404)
+        assert.ok(res.error.indexOf('<html>') !== -1)
+      })
+    })
+
     it('shows a 404 HTML page', () => {
       return rp({
         url: getUrl('path/to/nowhere'),

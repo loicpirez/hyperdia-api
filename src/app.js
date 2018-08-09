@@ -1,5 +1,3 @@
-const path = require('path')
-const favicon = require('serve-favicon')
 const compress = require('compression')
 const helmet = require('helmet')
 const cors = require('cors')
