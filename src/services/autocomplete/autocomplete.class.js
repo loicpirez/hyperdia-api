@@ -1,4 +1,7 @@
 /* eslint-disable no-unused-vars */
+
+import { requestAutoCompletion } from '../../hyperdia'
+
 class Service {
   constructor (options) {
     this.options = options || {}
@@ -11,10 +14,9 @@ class Service {
   }
 
   async get (query, params) {
+    const suggestions = await requestAutoCompletion(query)
     return {
-      result: {
-        query
-      }
+      suggestions
     }
   }
 }

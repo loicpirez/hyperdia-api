@@ -29,7 +29,7 @@ describe('Feathers application tests', () => {
     )
   })
 
-  describe('404', function () {
+  describe('404 tests', function () {
     it('shows a 404 HTML page', () => {
       return rp({
         url: getUrl('path/to/nowhere'),

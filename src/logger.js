@@ -9,7 +9,12 @@ const logger = createLogger({
     format.simple()
   ),
   transports: [
-    new transports.Console()
+    new transports.Console({
+      format: format.combine(
+        format.colorize(),
+        format.simple()
+      )
+    })
   ]
 })
 
