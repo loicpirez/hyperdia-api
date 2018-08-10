@@ -1,5 +1,7 @@
-import requestAutoCompletion from './request_autocompletion'
+import requestAutoCompletion from './request-autocompletion'
+import requestSearchResult from './request-searchresult'
 
 export {
-  requestAutoCompletion
+  requestAutoCompletion,
+  requestSearchResult
 }

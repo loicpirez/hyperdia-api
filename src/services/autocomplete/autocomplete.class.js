@@ -9,7 +9,7 @@ class Service {
 
   async find (params) {
     return {
-      text: 'Please request the autocomplete service with text. Exemple: `/tokyo`'
+      text: 'Please request the autocomplete service with text as a GET request. Exemple: `/tokyo`'
     }
   }
 
