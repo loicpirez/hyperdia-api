@@ -4,6 +4,8 @@
 
 ## About
 
+Warning ! It's still under development. Only `autocomplete` route is implemented. Documentation and usage will be in this README when `search` feature will be done. 
+
 This project uses [Feathers](http://feathersjs.com). An open source web framework for building modern real-time applications.
 
 ## Getting Started
